@@ -7,13 +7,14 @@ set(CMAKE_CXX_STANDARD 20) # Requires C++20 standard
 # Raylib
 set(OpenGL_GL_PREFERENCE GLVND)
 set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) # don't build the supplied examples
-set(CMAKE_BUILD_TYPE debug)
+set(CMAKE_BUILD_TYPE Debug)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/external/raylib)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/external/raylib/src)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
     src/Window.cpp
+    src/Game.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/inc)

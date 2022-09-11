@@ -12,3 +12,8 @@ Window::~Window()
 {
     CloseWindow();
 }
+
+bool Window::shouldClose()
+{
+    return WindowShouldClose();
+}

@@ -1,20 +1,12 @@
-#include <iostream>
-#include <raylib.h>
-
 #include "Window.h"
+#include "Game.h"
 
 int main(int argc, char const *argv[])
 {
     Window win(320, 240, "bbracer");
+    Game game(win);
 
-    while (!win.shouldClose())
-    {
-        BeginDrawing();
-        {
-            ClearBackground(BLUE);
-        }
-        EndDrawing();
-    }
+    game.run();
 
     return 0;
 }

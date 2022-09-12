@@ -11,5 +11,5 @@ public:
     Window(int w, int h, const char *title);
     ~Window();
 
-    bool shouldClose();
+    bool shouldClose() const;
 };
